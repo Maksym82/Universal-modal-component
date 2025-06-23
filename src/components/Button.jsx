@@ -1,7 +1,8 @@
-export default function Button({ setIsModalOpen }) {
+export default function Button({ children, variant, handleClick }) {
   return (
-    <button className="closeButton" onClick={() => setIsModalOpen(false)}>
-      &times;
+    <button className={variant} onClick={handleClick}>
+        {children}
+      
     </button>
   );
 }

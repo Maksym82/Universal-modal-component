@@ -77,17 +77,24 @@ import Main from "./components/Main";
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
+  function openModal() {
+    setIsModalOpen(true);
+  }
+
+  function closeModal() {
+    setIsModalOpen(false);
+  }
+
+  function alertCloseModal() {
+    alert("OK");
+    setIsModalOpen(false);
+  }
+
   return (
     <div className="app">
-      <Main isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
+      <Main isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} closeModal={closeModal} alertCloseModal={alertCloseModal}/>
     </div>
   );
 }
-
-
-
-
-
-
 
 export default App;
