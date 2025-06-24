@@ -92,7 +92,13 @@ function App() {
 
   return (
     <div className="app">
-      <Main isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} closeModal={closeModal} alertCloseModal={alertCloseModal}/>
+      <Main
+        isModalOpen={isModalOpen}
+        setIsModalOpen={setIsModalOpen}
+        closeModal={closeModal}
+        alertCloseModal={alertCloseModal}
+        openModal={openModal}
+      />
     </div>
   );
 }
